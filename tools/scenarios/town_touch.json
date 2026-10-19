@@ -1,0 +1,31 @@
+[
+  {
+    "name": "town_after",
+    "query": "?room=town&spawn=temple&look=hero&name=Noa&items=lens&flags=island.done,town.arrived,town.clara1,lens1.done,lens2.done,lens3.done,lens4.done,lens.boss,lens.done&pages=sociabilidade,imaginacao,desnaturalizar,sociologia",
+    "steps": [
+      ["wait", 1500], ["shot", "w1_town_return"],
+      ["eval", "window.__polis.bus.emit('debug:tp',10,12,'up')"], ["wait", 200], ["press", "KeyZ"], ["wait", 500], ["shot", "w2_clara"],
+      ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 200],
+      ["eval", "window.__polis.bus.emit('debug:tp',13,17,'left')"], ["wait", 200], ["press", "KeyZ"], ["wait", 500], ["shot", "w3_ze"],
+      ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 200],
+      ["press", "Escape"], ["wait", 400], ["shot", "w4_pause"],
+      ["press", "ArrowDown"], ["press", "ArrowDown"], ["press", "ArrowDown"], ["wait", 100], ["press", "KeyZ"], ["wait", 800], ["shot", "w5_resumao"],
+      ["eval", "document.getElementById('resumao').innerText.slice(0,200)"]
+    ]
+  },
+  {
+    "name": "touch",
+    "query": "?room=town&spawn=dock&look=hero&name=Noa&touch=1",
+    "steps": [["wait", 1500], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300], ["shot", "w6_touch"]]
+  },
+  {
+    "name": "title_save",
+    "query": "",
+    "steps": [
+      ["wait", 1000], ["eval", "localStorage.setItem('polis.save.v1', JSON.stringify({v:1,flags:['island.done','town.arrived'],items:[],journal:{sociabilidade:{did:['x'],unlockedAt:1}},hp:3,name:'Noa',look:'hero',room:'town',spawn:'dock',playtimeMs:0,savedAt:1,counters:{}}))"],
+      ["eval", "location.reload()"], ["wait", 1500], ["shot", "w7_title_continue"],
+      ["press", "KeyZ"], ["wait", 1500], ["shot", "w8_continued"],
+      ["eval", "window.__polis.state.room+'|'+window.__polis.state.name"]
+    ]
+  }
+]

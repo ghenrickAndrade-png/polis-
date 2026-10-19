@@ -1,0 +1,46 @@
+[
+  {
+    "name": "lens_hall",
+    "query": "?room=lens_hall&look=hero&name=Noa",
+    "steps": [
+      ["wait", 1200], ["shot", "l1_hall"],
+      ["hold", "ArrowUp", 1000], ["wait", 200], ["press", "KeyZ"], ["wait", 500], ["shot", "l2_pickup"],
+      ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 800], ["shot", "l3_doorOpen"],
+      ["eval", "[...window.__polis.state.items].join(',')+'|'+[...window.__polis.state.flags].join(',')"],
+      ["hold", "ArrowUp", 1700], ["wait", 1500], ["shot", "l4_lens1"],
+      ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300],
+      ["press", "KeyX"], ["wait", 400], ["shot", "l5_lensOn"],
+      ["hold", "ArrowUp", 1750], ["hold", "ArrowLeft", 1400], ["wait", 300], ["shot", "l6_ze"],
+      ["press", "KeyZ"], ["wait", 600], ["shot", "l7_clue"],
+      ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300],
+      ["hold", "ArrowRight", 2300], ["wait", 300], ["shot", "l8_carry"],
+      ["press", "KeyZ"], ["wait", 900], ["shot", "l9_linked"],
+      ["eval", "window.__polis.state.room"]
+    ]
+  },
+  {
+    "name": "lens2_view",
+    "query": "?room=lens2&look=hero&name=Noa&items=lens",
+    "steps": [["wait", 1200], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300], ["shot", "l10_lens2"]]
+  },
+  {
+    "name": "lens3_view",
+    "query": "?room=lens3&look=hero&name=Noa&items=lens",
+    "steps": [["wait", 1200], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300], ["press", "KeyX"], ["wait", 300], ["shot", "l11_lens3"]]
+  },
+  {
+    "name": "lens4_view",
+    "query": "?room=lens4&look=hero&name=Noa&items=lens",
+    "steps": [["wait", 1200], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300], ["shot", "l12_lens4"], ["press", "KeyX"], ["wait", 300], ["shot", "l13_lens4on"]]
+  },
+  {
+    "name": "boss_view",
+    "query": "?room=lens_boss&look=hero&name=Noa&items=lens",
+    "steps": [["wait", 1500], ["shot", "l14_boss_intro"], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 2500], ["press", "KeyX"], ["wait", 300], ["shot", "l15_boss"]]
+  },
+  {
+    "name": "sage_view",
+    "query": "?room=lens_sage&look=hero&name=Noa&items=lens",
+    "steps": [["wait", 1500], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 300], ["press", "KeyX"], ["wait", 300], ["shot", "l16_sage"]]
+  }
+]

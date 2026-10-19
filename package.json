@@ -1,0 +1,27 @@
+{
+  "name": "polis",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Pólis — jogo 2D top-down que ensina Sociologia (2º ano do ensino médio)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "shots": "node tools/shots.cjs"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "^153.0.0",
+    "@types/node": "^26.6.5",
+    "puppeteer-core": "^25.14.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5"
+  }
+}

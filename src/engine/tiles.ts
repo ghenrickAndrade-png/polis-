@@ -1,0 +1,50 @@
+/** Índices do tileset procedural e legenda dos mapas (sem dependência do Phaser). */
+export const T = {
+  grass: 0,
+  flower: 1,
+  path: 2,
+  sand: 3,
+  water: 4,
+  deep: 5,
+  wall: 6,
+  floor: 7,
+  wood: 8,
+  rock: 9,
+  cliff: 10,
+  bridge: 11,
+  doorClosed: 12,
+  doorOpen: 13,
+  void: 14,
+  carpet: 15,
+  wallTop: 16,
+  cobble: 17,
+  dirt: 18,
+  fog: 19,
+  ice: 20,
+} as const;
+
+export const SOLID_TILES: number[] = [T.wall, T.water, T.deep, T.rock, T.cliff, T.doorClosed, T.void, T.wallTop];
+
+export const LEGEND: Record<string, number> = {
+  g: T.grass,
+  f: T.flower,
+  p: T.path,
+  s: T.sand,
+  w: T.water,
+  W: T.deep,
+  '#': T.wall,
+  '.': T.floor,
+  '=': T.wood,
+  r: T.rock,
+  c: T.cliff,
+  b: T.bridge,
+  D: T.doorClosed,
+  d: T.doorOpen,
+  ' ': T.void,
+  C: T.carpet,
+  '^': T.wallTop,
+  o: T.cobble,
+  k: T.dirt,
+  t: T.grass, // árvore: tile de grama + prop automático
+  i: T.ice,
+};

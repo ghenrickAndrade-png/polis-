@@ -1,0 +1,11 @@
+[
+  {
+    "name": "dbg",
+    "query": "?room=lens1&look=hero&name=Noa&items=lens",
+    "steps": [
+      ["wait", 1200], ["eval", "window.__polis.bus.emit('debug:skipDialogue',0)"], ["wait", 200],
+      ["eval", "window.__polis.bus.emit('debug:tp',8,5,'left')"], ["wait", 150],
+      ["eval", "(()=>{const s=window.__polis.game.scene.getScene('Room');const p=s.player.interactPoint(12);return [p, s.interactables.map(i=>[i.id,i.kind,Math.round(i.obj.x),Math.round(i.obj.y),i.radius])]})()"]
+    ]
+  }
+]
