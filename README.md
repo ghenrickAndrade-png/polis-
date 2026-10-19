@@ -1,8 +1,12 @@
 # Pólis
 
+**Jogar online:** https://ghenrickandrade-png.github.io/polis-/ · código: https://github.com/ghenrickAndrade-png/polis-
+
 Jogo 2D top-down (estilo *Zelda*) que ensina o capítulo de introdução à Sociologia do 2º ano do ensino médio (págs. 12–51 do livro). Cada conceito vira um item ou uma mecânica; o Caderno do jogo usa o vocabulário do livro.
 
 ## Rodar
+
+Publicar uma versão nova no GitHub Pages: `npm run build`, copie `dist/index.html` para a branch `gh-pages` (com `.nojekyll`) e dê push — o Pages republica sozinho.
 
 ```bash
 npm install
